@@ -1,5 +1,5 @@
 # Secret Scribble
-Is an offline password manager for Windows. It has basic features that you will find in the most popular ones, along side with some unique! You can see more detailed information on its official webpage **(https://secretscribble.42web.io)**
+Is an offline password manager for Windows. It has basic features that you will find in the most popular ones, along side with some unique! You can see more detailed information (some features advertised are not yet implemented), alongside the executable on its official webpage **(https://secretscribble.42web.io)**
 
 ## Linking steps:
 1. You will need to download and link SFML 2.6.0 **(https://www.sfml-dev.org/download/sfml/old-versions.php)**. You can follow this useful video to guide you through the linking proccess **(https://www.youtube.com/watch?v=WoVoIhgutMU)**
