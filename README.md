@@ -13,4 +13,7 @@ Is an offline password manager for Windows. It has basic features that you will 
 
 2. ImGui is a UI library, but we only use it for its advanced text editor feature.
 
-3. Cryptopp handles all the encryprion.
+3. Cryptopp handles all the encryprion. It provides all the juicy encryption-decription algorithms!
+
+## Current Bugs & Problems
+[ x ] Currently your master password is stored by getting encrypted with a pre-defined hardcoded password which is not the best practice. This will change in the future.
