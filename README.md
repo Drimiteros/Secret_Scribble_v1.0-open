@@ -1,4 +1,4 @@
-# Secret Scribble
+# </ Secret Scribble />
 Is an offline password manager for Windows. It has basic features that you will find in the most popular ones, along side with some unique! You can see more detailed information, alongside the executable on its official webpage **(https://secretscribble.42web.io)** (The website is a bit outdated and some features advertised are not yet implemented to the app)
 
 ## The code
