@@ -5,8 +5,7 @@ Renderer::Renderer()
     //CREATE WINDOW
     window.create(VideoMode(1480, 815), "Secret Scribble v.Beta 1.0 pre-7");
     window.setFramerateLimit(144);
-    Image icon;
-    icon.loadFromFile("src/Textures/icon2.png");
+    icon.loadFromFile("src/Textures/icon.png");
     window.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
     Init(window, false);
 
@@ -66,6 +65,7 @@ void Renderer::events()
             window.close();
             window.create(VideoMode(newSize.x, newSize.y), "Password Manager v.6");
             window.setPosition(newPos);
+            window.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
             window.setFramerateLimit(144);
         }
 

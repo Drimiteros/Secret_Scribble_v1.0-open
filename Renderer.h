@@ -40,6 +40,7 @@ private:
     RectangleShape line;
     RectangleShape line2;
     static const ImWchar additionalRanges[];
+    Image icon;
 
     //TEXTURES
     //ASSIGN NAMES TO EVERY TEXTURE (INSTEAD OF TYPING texture[0].loadFromFile("...") TYPE texture[terminateButtonTexture].loadFromFile("..."))
