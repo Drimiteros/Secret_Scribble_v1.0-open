@@ -59,7 +59,7 @@ void Donate::logic(RenderWindow& window, int& state, CursorSprite& mc, bool& isP
 			else
 				donateButton.setTextureRect(IntRect(0, 0, 520, 157));
 			if (mc.cursor.getGlobalBounds().intersects(donateButton.getGlobalBounds()) && Mouse::isButtonPressed(Mouse::Left))
-				system("start https://secretscribble.42web.io/CreatorSupport.html");
+				system("start https://www.paypal.com/donate/?hosted_button_id=78P55A9PQUYFU");
 		}
 		else
 		{
