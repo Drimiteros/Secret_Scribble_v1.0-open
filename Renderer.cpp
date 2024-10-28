@@ -3,7 +3,7 @@
 Renderer::Renderer()
 {
     //CREATE WINDOW
-    window.create(VideoMode(1480, 815), "Secret Scribble v.Beta 1.0 pre-7");
+    window.create(VideoMode(1480, 815), "Secret Scribble v. 1.1 open");
     window.setFramerateLimit(144);
     icon.loadFromFile("src/Textures/icon.png");
     window.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
