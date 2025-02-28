@@ -1,1 +1,0 @@
-Clipboard erase time (sec): 10
