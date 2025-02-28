@@ -4,6 +4,10 @@
 #include <string>
 #include <cstdio>
 #include <sstream>
+#include <cryptlib.h>
+#include <pwdbased.h>
+#include <secblock.h>
+#include <sha.h>
 #include "TextEditor.h"
 #include "Secure.h"
 #include "CursorSprite.h"

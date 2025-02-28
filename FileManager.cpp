@@ -5,39 +5,15 @@ FileManager::FileManager()
 
 }
 
-string getObfuscatedLetters() {
-    // Pieces of the letters string
-    string part1 = "WABC9DEFsGHIDJKL!MNOxPQR7STUVVWX@YZ12";
-    string part2 = "r3453678Q90!b@#$&%^&T*()6_+{yabc1def$";
-    string part3 = "ghizgklNmnowpqr^stu2vwxFyzg098*765H43";
-    string part4 = "2k1AC5EFGLTYU~POI";
-
-    return part1 + part2 + part3 + part4;
-}
-
 string generateGrade(const string& password) {
-    string letters = getObfuscatedLetters();
-    string grade;
+    string salt = "thisisauniquesalt"; // Change this per user/system
 
-    for (int a = 0; a < letters.size() / 2; a += 4) {
-        grade += letters[a];
-    }
-    for (int a = letters.size() / 2; a < letters.size(); a += 4) {
-        grade += letters[a];
-    }
+    SecByteBlock derivedKey(32);
 
-    grade = grade.substr(0, 24);
+    PKCS5_PBKDF2_HMAC<SHA256> pbkdf2;
+    pbkdf2.DeriveKey(derivedKey, derivedKey.size(), 0, reinterpret_cast<const byte*>(password.data()), password.size(), reinterpret_cast<const byte*>(salt.data()), salt.size(), 100000);
 
-    for (int a = 0; a < 8; a++) {
-        grade += password[a];
-    }
-
-    char xor_const = 0x5A;
-    for (char& c : grade) {
-        c ^= xor_const;
-    }
-
-    return grade;
+    return string(reinterpret_cast<const char*>(derivedKey.data()), derivedKey.size());
 }
 
 void FileManager::loadStageInfo(int& stage)
